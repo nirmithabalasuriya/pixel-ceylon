@@ -36,7 +36,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
       { url: '/images/Meshaun gallery.webp', alt: 'Meshaun journeys cover image' },
       { url: '/images/Meshaun gallery 1.webp', alt: 'Meshaun journeys interface preview' },
     ],
-    external_url: '',
+    external_url: 'https://meshaunjourneys.com/',
     display_order: 1,
   },
   {
@@ -53,7 +53,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
       { url: '/images/Gosberton gallery.webp', alt: 'Gosberton House cover image' },
       { url: '/images/Gosberton gallery 1.webp', alt: 'Gosberton House preview' },
     ],
-    external_url: '',
+    external_url: 'https://gosbertonhouse.co.uk/',
     display_order: 2,
   },
   {
