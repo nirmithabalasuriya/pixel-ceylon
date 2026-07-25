@@ -94,7 +94,7 @@ export default function SocialProof() {
             Digital Marketing
           </span>
           <h2
-            className="font-['Bebas_Neue'] leading-none text-[#0A0A0A] mb-4"
+            className="font-bebas leading-none text-[#0A0A0A] mb-4"
             style={{ fontSize: 'clamp(38px, 5vw, 62px)' }}
           >
             We Grow <span className="text-[#b5e409]">Audiences</span>
@@ -120,7 +120,7 @@ export default function SocialProof() {
               <div className="text-[15px] font-bold text-[#0A0A0A] mb-1">{c.name}</div>
               <div className="text-[12px] text-[#6B7280] mb-5">{c.platform}</div>
               <div
-                className="font-['Bebas_Neue'] text-[#b5e409] leading-none"
+                className="font-bebas text-[#b5e409] leading-none"
                 style={{ fontSize: 38 }}
               >
                 {c.count}

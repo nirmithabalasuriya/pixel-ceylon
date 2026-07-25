@@ -10,6 +10,8 @@ type Project = {
   client_type: string;
   tags: string[];
   display_order: number;
+  summary?: string;
+  image_url?: string;
 };
 
 function getProjects(): Project[] {
@@ -20,6 +22,8 @@ function getProjects(): Project[] {
     client_type: project.client_type,
     tags: project.tags,
     display_order: project.display_order,
+    summary: project.summary,
+    image_url: project.image_url,
   }));
 }
 
