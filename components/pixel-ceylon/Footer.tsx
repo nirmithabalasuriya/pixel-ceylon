@@ -131,7 +131,7 @@ export default function Footer() {
             {/* Contact Info */}
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-sm text-[#7E8190]">
               <a
-                href="mailto:hello@pixelceylon.com"
+                href="mailto:sayhi@pixelceylon.com.au"
                 className="flex items-center gap-2 hover:text-white transition-colors"
               >
                 <Mail className="w-4 h-4 text-[#b5e409]" />
