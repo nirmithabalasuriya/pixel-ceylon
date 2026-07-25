@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Bebas_Neue, Manrope, Space_Mono } from 'next/font/google';
 import { SEO_CONFIG, DEFAULT_OG_IMAGE } from '@/lib/seo';
+import WhatsAppButton from '@/components/pixel-ceylon/WhatsAppButton';
 
 const bebasNeue = Bebas_Neue({
   subsets: ['latin'],
@@ -144,6 +145,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         suppressHydrationWarning
       >
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );

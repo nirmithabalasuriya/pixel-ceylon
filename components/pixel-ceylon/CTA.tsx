@@ -22,7 +22,7 @@ export default function CTA() {
               Start Today
             </span>
             <h2
-              className="font-['Bebas_Neue'] leading-[0.93] text-white"
+              className="font-bebas leading-[0.93] text-white"
               style={{ fontSize: 'clamp(42px, 6vw, 78px)' }}
             >
               READY TO GROW

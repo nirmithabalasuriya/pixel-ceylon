@@ -71,7 +71,7 @@ export default function Stats() {
             By the Numbers
           </span>
           <h2
-            className="font-['Bebas_Neue'] leading-none text-[#0A0A0A]"
+            className="font-bebas leading-none text-[#0A0A0A]"
             style={{ fontSize: 'clamp(38px, 5vw, 62px)' }}
           >
             Why Clients <span className="text-[#b5e409]">Trust Us</span>
@@ -96,13 +96,13 @@ export default function Stats() {
               <Users className="w-4 h-4 text-[#9CA3AF]" strokeWidth={1.5} />
             </div>
             <div
-              className="font-['Bebas_Neue'] leading-none text-[#0A0A0A]"
+              className="font-bebas leading-none text-[#0A0A0A]"
               style={{ fontSize: 64 }}
             >
               <span className="text-[#b5e409]">23</span>+
             </div>
             <p className="text-sm text-[#6B7280] mt-2">Websites, branding &amp; campaigns delivered</p>
-            <div className="absolute bottom-[-16px] right-[-8px] font-['Bebas_Neue'] text-[120px] leading-none text-[#0A0A0A]/[0.03] select-none pointer-events-none">
+            <div className="absolute bottom-[-16px] right-[-8px] font-bebas text-[120px] leading-none text-[#0A0A0A]/[0.03] select-none pointer-events-none">
               23
             </div>
           </StatCard>
@@ -114,7 +114,7 @@ export default function Stats() {
               <Clock className="w-4 h-4 text-[#9CA3AF]" strokeWidth={1.5} />
             </div>
             <div
-              className="font-['Bebas_Neue'] leading-none text-[#0A0A0A]"
+              className="font-bebas leading-none text-[#0A0A0A]"
               style={{ fontSize: 64 }}
             >
               <span className="text-[#b5e409]">2-3</span>weeks
@@ -128,11 +128,11 @@ export default function Stats() {
               <p className="text-[11px] font-semibold text-[#6B7280] uppercase tracking-[0.1em]">Countries Served</p>
               <Globe className="w-4 h-4 text-[#9CA3AF]" strokeWidth={1.5} />
             </div>
-            <div className="font-['Bebas_Neue'] leading-none text-[#0A0A0A]" style={{ fontSize: 64 }}>
+            <div className="font-bebas leading-none text-[#0A0A0A]" style={{ fontSize: 64 }}>
               <span className="text-[#b5e409]">4</span>+
             </div>
             <p className="text-sm text-[#6B7280] mt-2">Across borders &amp; time zones</p>
-            <div className="absolute bottom-[-16px] right-[-8px] font-['Bebas_Neue'] text-[120px] leading-none text-[#0A0A0A]/[0.03] select-none pointer-events-none">
+            <div className="absolute bottom-[-16px] right-[-8px] font-bebas text-[120px] leading-none text-[#0A0A0A]/[0.03] select-none pointer-events-none">
               4
             </div>
           </StatCard>
@@ -144,7 +144,7 @@ export default function Stats() {
               <BarChart3 className="w-4 h-4 text-[#9CA3AF]" strokeWidth={1.5} />
             </div>
             <div className="flex items-end gap-5">
-              <div className="font-['Bebas_Neue'] leading-none text-[#0A0A0A]" style={{ fontSize: 64 }}>
+              <div className="font-bebas leading-none text-[#0A0A0A]" style={{ fontSize: 64 }}>
                 <span className="text-[#b5e409]">30</span>+
               </div>
               {/* Mini bar chart */}
@@ -167,7 +167,7 @@ export default function Stats() {
               <p className="text-[11px] font-semibold text-[#6B7280] uppercase tracking-[0.1em]">AI Automation</p>
               <Bot className="w-4 h-4 text-[#9CA3AF]" strokeWidth={1.5} />
             </div>
-            <div className="font-['Bebas_Neue'] text-[28px] text-[#b5e409] my-2">ACTIVE</div>
+            <div className="font-bebas text-[28px] text-[#b5e409] my-2">ACTIVE</div>
             <p className="text-sm text-[#6B7280]">Workflows &amp; agents built for efficiency</p>
             <div className="absolute top-6 right-6 w-2 h-2 rounded-full bg-[#b5e409] pulse-dot" />
           </StatCard>

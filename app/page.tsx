@@ -4,7 +4,9 @@ import Ticker from '@/components/pixel-ceylon/Ticker';
 import Services from '@/components/pixel-ceylon/Services';
 import Stats from '@/components/pixel-ceylon/Stats';
 import Projects from '@/components/pixel-ceylon/Projects';
+import Founder from '@/components/pixel-ceylon/Founder';
 import SocialProof from '@/components/pixel-ceylon/SocialProof';
+import Testimonials from '@/components/pixel-ceylon/Testimonials';
 import CTA from '@/components/pixel-ceylon/CTA';
 import Footer from '@/components/pixel-ceylon/Footer';
 import { HomeStructuredData } from '@/components/seo/HomeStructuredData';
@@ -23,7 +25,9 @@ export default function Home() {
         <Ticker />
         <Services />
         <Stats />
+        <Founder />
         <Projects />
+        <Testimonials />
         <SocialProof />
         <CTA />
         <Footer />
