@@ -97,9 +97,9 @@ export default function SocialProof() {
             className="font-bebas leading-none text-[#0A0A0A] mb-4"
             style={{ fontSize: 'clamp(38px, 5vw, 62px)' }}
           >
-            We Grow <span className="text-[#b5e409]">Audiences</span>
+            We Grow <span className="text-[#1D6252]">Audiences</span>
           </h2>
-          <p className="text-base text-[#6B7280] max-w-[480px] mx-auto">
+          <p className="text-base text-[#1D6252] max-w-[480px] mx-auto">
             Our social media management builds communities that convert. Here's what we've achieved for our clients.
           </p>
         </motion.div>

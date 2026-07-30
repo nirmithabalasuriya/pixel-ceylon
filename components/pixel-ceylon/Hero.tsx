@@ -58,7 +58,7 @@ export default function Hero() {
               transition={{ duration: 0.65, delay: 0.05 }}
               className="flex items-center gap-3 mb-7"
             >
-              <span className="w-2 h-2 rounded-full bg-[#b5e409] pulse-dot block" />
+              <span className="w-2 h-2 rounded-full bg-[#1D6252] pulse-dot block" />
               <span style={{ fontFamily: 'var(--font-space-mono, monospace)' }} className="text-[11px] text-[#6B7280] tracking-[0.12em] uppercase">
                 Sri Lanka&apos;s Digital Agency
               </span>
@@ -79,7 +79,7 @@ export default function Hero() {
             >
               BUILDING
               <br />
-              <span style={{ color: '#17472F' }}>
+              <span style={{ color: '#1D6252' }}>
                 DIGITAL
               </span>
               <br />

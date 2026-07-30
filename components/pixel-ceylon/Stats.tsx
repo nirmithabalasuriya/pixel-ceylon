@@ -74,7 +74,7 @@ export default function Stats() {
             className="font-bebas leading-none text-[#0A0A0A]"
             style={{ fontSize: 'clamp(38px, 5vw, 62px)' }}
           >
-            Why Clients <span className="text-[#b5e409]">Trust Us</span>
+            Why Clients <span className="text-[#1D6252]">Trust Us</span>
           </h2>
         </motion.div>
 

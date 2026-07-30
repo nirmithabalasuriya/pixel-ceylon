@@ -1,41 +1,89 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { ArrowRight, Check } from 'lucide-react';
+import Image from 'next/image';
+
+const achievements = ['UI/UX Engineer', '5+ Years Experience', '100+ Completed Projects', 'Trusted by Global Clients'];
 
 export default function Founder() {
   return (
-    <section id="founder" style={{ background: '#0F1117' }} className="py-20">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-          <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="flex items-center justify-center">
-            <div className="w-60 h-60 rounded-2xl bg-gradient-to-br from-[#0F1117] to-[#181B25] overflow-hidden border border-[#1E2130] flex items-center justify-center">
-              <svg width="160" height="160" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="8" r="3.5" fill="#E6E7EB" />
-                <path d="M4 20c0-3.3137 2.6863-6 6-6h4c3.3137 0 6 2.6863 6 6" fill="#E6E7EB" />
-              </svg>
+    <section id="founder" className="relative overflow-hidden py-24" style={{ background: '#F2F6DD' }}>
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(circle at 15% 15%, rgba(181,228,9,0.14) 0%, transparent 30%), radial-gradient(circle at 85% 25%, rgba(109,125,255,0.11) 0%, transparent 24%), radial-gradient(circle at 80% 80%, rgba(29,98,82,0.12) 0%, transparent 30%)',
+        }}
+      />
+      
+      {/* Premium subtle dot grid texture */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.10]"
+        style={{
+          backgroundImage: `radial-gradient(circle, #0A0A0A 1px, transparent 1px)`,
+          backgroundSize: '32px 32px',
+        }}
+      />
+
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-8">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
+          <motion.div
+            initial={{ opacity: 0, x: -24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-[620px]"
+          >
+            <span className="mb-5 inline-flex rounded-full border border-[#1D6252]/15 bg-white/70 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#1D6252]">
+              Meet The Founder
+            </span>
+            <h3 className="font-bebas text-4xl sm:text-5xl md:text-6xl text-[#0F1117] leading-[0.9] tracking-[0.01em]">
+              NIRMITHA<br />
+              <span className="text-[#1D6252]">BALASURIYA</span>
+            </h3>
+
+            <p className="mt-6 max-w-[560px] text-[17px] leading-8 text-[#31403A]">
+              Founder & Creative Director of Pixel Ceylon, passionate about building premium digital experiences, modern websites, and scalable products for businesses worldwide.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              {achievements.map((achievement) => (
+                <div key={achievement} className="flex items-center gap-2 rounded-full border border-[#1D6252]/15 bg-white/75 px-3.5 py-2 text-sm text-[#1D6252] shadow-sm">
+                  <Check className="h-4 w-4 text-[#b5e409]" />
+                  {achievement}
+                </div>
+              ))}
             </div>
+
+            <a
+              href="#contact"
+              className="mt-10 inline-flex items-center gap-2 rounded-full border border-[#0F1117]/10 bg-[#0F1117] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1D6252]"
+            >
+              Let&apos;s Work Together
+              <ArrowRight className="h-4 w-4" />
+            </a>
           </motion.div>
 
-          <div className="md:col-span-2">
-            <motion.h3 initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="font-bebas text-3xl text-white mb-3">Founder — Nirmitha Balasuriya</motion.h3>
-            <motion.p initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.06 }} className="text-[#9CA3AF] mb-4 max-w-prose">
-              Nirmitha is a digital strategist and creative director with over a decade of experience building premium digital experiences for hospitality, travel and enterprise brands. She focuses on performance, storytelling and craft.
-            </motion.p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="bg-[#FFFFFF] text-[#0A0A0A] p-4 rounded-lg shadow-sm">
-                <div className="text-sm font-semibold">Mission</div>
-                <div className="text-xs text-[#6B7280] mt-1">Create thoughtful digital products that are useful, delightful and drive measurable business impact.</div>
-              </div>
-              <div className="bg-[#FFFFFF] text-[#0A0A0A] p-4 rounded-lg shadow-sm">
-                <div className="text-sm font-semibold">Values</div>
-                <div className="text-xs text-[#6B7280] mt-1">Craft, Clarity, Honesty — we value good process, transparent pricing, and measured outcomes.</div>
-              </div>
-              <div className="bg-[#FFFFFF] text-[#0A0A0A] p-4 rounded-lg shadow-sm">
-                <div className="text-sm font-semibold">Expertise</div>
-                <div className="text-xs text-[#6B7280] mt-1">Design systems, performance-first development, and data-driven marketing.</div>
-              </div>
+          <motion.div
+            initial={{ opacity: 0, x: 24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.65 }}
+            className="relative"
+          >
+            <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-[#b5e409]/20 via-transparent to-[#1D6252]/20 blur-3xl" />
+            <div className="relative overflow-hidden rounded-[2rem] border border-[#1D6252]/10 bg-[#0F1117] p-3 shadow-[0_24px_80px_rgba(15,17,23,0.16)]">
+              <Image
+                src="/images/Nirmitha.webp"
+                alt="Nirmitha Balasuriya"
+                width={760}
+                height={920}
+                priority
+                className="h-auto w-full rounded-[1.4rem] object-cover"
+              />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -25,8 +25,8 @@ export default function Home() {
         <Ticker />
         <Services />
         <Stats />
-        <Founder />
         <Projects />
+        <Founder />
         <Testimonials />
         <SocialProof />
         <CTA />

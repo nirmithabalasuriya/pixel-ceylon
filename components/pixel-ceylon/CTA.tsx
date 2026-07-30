@@ -27,7 +27,7 @@ export default function CTA() {
             >
               READY TO GROW
               <br />
-              <span style={{ WebkitTextStroke: '1.5px #7E8190', color: 'transparent' }}>
+              <span style={{ color: '#60A5FA', }}>
                 YOUR BRAND?
               </span>
             </h2>
