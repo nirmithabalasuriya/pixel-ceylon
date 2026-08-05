@@ -36,11 +36,7 @@ export default function Nav() {
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-      ? 'bg-white/80 backdrop-blur-2xl border-b border-gray-200'
-      : 'bg-transparent'
-  }`}
+        className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm transition-all duration-300"
       >
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-4 flex items-center justify-between gap-8">
           {/* Logo */}
@@ -48,9 +44,9 @@ export default function Nav() {
             <Image
               src="/white.svg"
               alt="Pixel Ceylon"
-              width={120}
-              height={60}
-              className="h-20 w-40"
+              width={144}
+              height={72}
+              className="h-24 w-auto max-w-[180px]"
               priority
             />
           </a>

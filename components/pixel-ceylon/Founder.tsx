@@ -73,14 +73,14 @@ export default function Founder() {
             className="relative"
           >
             <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-[#b5e409]/20 via-transparent to-[#1D6252]/20 blur-3xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-[#1D6252]/10 bg-[#0F1117] p-3 shadow-[0_24px_80px_rgba(15,17,23,0.16)]">
+            <div className="relative overflow-hidden rounded-[1.75rem] border border-[#1D6252]/8 p-1 shadow-[0_20px_48px_rgba(15,17,23,0.12)] lg:max-w-[520px] mx-auto">
               <Image
-                src="/images/Nirmitha.webp"
+                src="/images/founder.webp"
                 alt="Nirmitha Balasuriya"
                 width={760}
                 height={920}
                 priority
-                className="h-auto w-full rounded-[1.4rem] object-cover"
+                className="h-auto w-full rounded-[1.5rem] object-contain"
               />
             </div>
           </motion.div>

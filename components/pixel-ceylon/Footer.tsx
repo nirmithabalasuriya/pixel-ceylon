@@ -38,7 +38,7 @@ export default function Footer() {
               </defs>
               <text
                 fill="none"
-                stroke="rgba(200, 255, 0, 0.3)"
+                stroke="rgba(200, 255, 0, 0.89)"
                 strokeWidth="0.5"
                 fontSize="9"
                 fontFamily="system-ui, sans-serif"
@@ -82,7 +82,7 @@ export default function Footer() {
             className="absolute inset-0"
             style={{
               backgroundImage:
-                'linear-gradient(rgba(255, 255, 255, 0) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px)',
+                'linear-gradient(rgba(173, 161, 161, 0) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px)',
               backgroundSize: '54px 54px',
             }}
           />
