@@ -5,6 +5,7 @@ import { useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
+import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card';
 
 type Project = {
   id: string;
@@ -24,54 +25,64 @@ function ProjectCard({ p, index }: { p: Project; index: number }) {
   const year = new Date().getFullYear();
 
   return (
-    <motion.article
-      ref={ref}
-      initial={{ opacity: 0, y: 18 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay: index * 0.06, ease: 'easeOut' }}
-      className="group rounded-2xl overflow-hidden bg-[#0F1117] border border-[#1E2130] shadow-sm shadow-black/30"
-    >
-      <Link href={`/work/${p.slug}`} className="block">
-        <div className="relative w-full h-56 md:h-64 lg:h-56 overflow-hidden">
-          {p.image_url ? (
-            <Image
-            src={p.image_url}
-            alt={`${p.name} thumbnail`}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-            priority={index === 0}
-            />
-          ) : (
-            <div className="w-full h-full bg-gradient-to-br from-[#0F1117] to-[#181B25] flex items-center justify-center text-[#7E8190]">No image</div>
-          )}
-        </div>
+    <CardContainer containerClassName="py-0">
+      <motion.article
+        ref={ref}
+        initial={{ opacity: 0, y: 18 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6, delay: index * 0.06, ease: 'easeOut' }}
+        className="group rounded-2xl overflow-hidden bg-[#0F1117] border border-[#1E2130] shadow-sm shadow-black/30"
+      >
+        <CardBody className="h-full w-full [transform-style:preserve-3d] bg-transparent border-0 shadow-none">
+          <Link href={`/work/${p.slug}`} className="block">
+            <CardItem translateZ={80}>
+              <div className="relative w-full h-56 md:h-64 lg:h-56 overflow-hidden">
+                {p.image_url ? (
+                  <Image
+                    src={p.image_url}
+                    alt={`${p.name} thumbnail`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    priority={index === 0}
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-[#0F1117] to-[#181B25] flex items-center justify-center text-[#7E8190]">No image</div>
+                )}
+              </div>
+            </CardItem>
 
-        <div className="p-6">
-          <div className="flex items-center justify-between mb-3">
-            <span className="inline-block bg-[#181B25] border border-[#1E2130] text-[12px] text-[#7E8190] rounded-full px-3 py-1">{p.client_type}</span>
-            <div className="text-sm text-[#7E8190] font-mono">{year}</div>
-          </div>
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-3">
+                <span className="inline-block bg-[#181B25] border border-[#1E2130] text-[12px] text-[#7E8190] rounded-full px-3 py-1">{p.client_type}</span>
+                <div className="text-sm text-[#7E8190] font-mono">{year}</div>
+              </div>
 
-          <h3 className="text-xl font-bebas text-white mb-2 leading-tight">{p.name}</h3>
-          <p className="text-sm text-[#9CA3AF] mb-4">{p.summary ?? ''}</p>
+              <CardItem translateZ={50}>
+                <h3 className="text-xl font-bebas text-white mb-2 leading-tight">{p.name}</h3>
+              </CardItem>
+              <CardItem translateZ={35}>
+                <p className="text-sm text-[#9CA3AF] mb-4">{p.summary ?? ''}</p>
+              </CardItem>
 
-          <div className="flex items-center justify-between">
-            <div className="flex gap-2 flex-wrap">
-            {p.tags?.slice(0, 3).map((t) => (
-              <span key={t} className="text-[12px] bg-[#0B0C0F] border border-[#1E2130] px-2 py-0.5 rounded text-[#7E8190]">{t}</span>
-            ))}
+              <div className="flex items-center justify-between">
+                <CardItem translateZ={40} className="flex gap-2 flex-wrap">
+                  {p.tags?.slice(0, 3).map((t) => (
+                    <span key={t} className="text-[12px] bg-[#0B0C0F] border border-[#1E2130] px-2 py-0.5 rounded text-[#7E8190]">{t}</span>
+                  ))}
+                </CardItem>
+                <CardItem translateZ={60} className="flex items-center gap-3 text-[#60A5FA]">
+                  <span className="text-sm font-semibold hidden sm:inline">View Case Study</span>
+                  <div className="w-9 h-9 rounded-full border border-[#60A5FA]/30 flex items-center justify-center group-hover:bg-[#60A5FA] group-hover:border-[#60A5FA] transition-all duration-200">
+                    <ArrowUpRight className="w-4 h-4 group-hover:text-black text-[#60A5FA] transition-colors duration-200" />
+                  </div>
+                </CardItem>
+              </div>
             </div>
-            <div className="flex items-center gap-3 text-[#60A5FA]">
-            <span className="text-sm font-semibold hidden sm:inline">View Case Study</span>
-            <div className="w-9 h-9 rounded-full border border-[#60A5FA]/30 flex items-center justify-center group-hover:bg-[#60A5FA] group-hover:border-[#60A5FA] transition-all duration-200">
-              <ArrowUpRight className="w-4 h-4 group-hover:text-black text-[#60A5FA] transition-colors duration-200" />
-            </div>
-            </div>
-          </div>
-        </div>
-      </Link>
-    </motion.article>
+          </Link>
+        </CardBody>
+      </motion.article>
+    </CardContainer>
   );
 }
 
