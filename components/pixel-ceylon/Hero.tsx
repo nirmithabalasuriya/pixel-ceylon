@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden"
+      className="relative min-h-screen flex items-center pt-28 pb15 overflow-hidden"
       style={{ background: '#FFFFFF' }}
     >
       {/* Premium subtle dot grid texture */}
@@ -56,7 +56,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.05 }}
-              className="flex items-center gap-3 mb-7"
+              className="flex items-center gap-3 mb-3"
             >
               <span className="w-2 h-2 rounded-full bg-[#1D6252] pulse-dot block" />
               <span style={{ fontFamily: 'var(--font-space-mono, monospace)' }} className="text-[11px] text-[#6B7280] tracking-[0.12em] uppercase">
