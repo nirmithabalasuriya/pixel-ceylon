@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Check } from 'lucide-react';
 import Image from 'next/image';
 
-const achievements = ['UI/UX Engineer', '5+ Years Experience', '100+ Completed Projects', 'Trusted by Global Clients'];
+const achievements = ['Software Engineer', '8+ Years Experience', '100+ Completed Projects', 'Trusted by Global Clients'];
 
 export default function Founder() {
   return (
@@ -39,8 +39,8 @@ export default function Founder() {
               Meet The Founder
             </span>
             <h3 className="font-bebas text-4xl sm:text-5xl md:text-6xl text-[#0F1117] leading-[0.9] tracking-[0.01em]">
-              NIRMITHA<br />
-              <span className="text-[#1D6252]">BALASURIYA</span>
+              NIPUNA<br />
+              <span className="text-[#1D6252]">FERNANDO</span>
             </h3>
 
             <p className="mt-6 max-w-[560px] text-[17px] leading-8 text-[#31403A]">
@@ -76,7 +76,7 @@ export default function Founder() {
             <div className="relative overflow-hidden rounded-[1.75rem] border border-[#1D6252]/8 p-1 shadow-[0_20px_48px_rgba(15,17,23,0.12)] lg:max-w-[520px] mx-auto">
               <Image
                 src="/images/founder.webp"
-                alt="Nirmitha Balasuriya"
+                alt="Nipuna Fernando"
                 width={760}
                 height={920}
                 priority

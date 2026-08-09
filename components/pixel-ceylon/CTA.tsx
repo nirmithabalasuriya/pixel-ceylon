@@ -8,8 +8,8 @@ export default function CTA() {
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section style={{ background: '#0F1117', borderTop: '1px solid #1E2130', borderBottom: '1px solid #1E2130' }}>
-      <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-20">
+    <section style={{ background: '#07080d', borderTop: '1px solid #1E2130'}}>
+      <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 24 }}
