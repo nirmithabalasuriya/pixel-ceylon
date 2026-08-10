@@ -67,9 +67,9 @@ export default function Hero() {
       </div>
 
       {/* ===== LAYER 2: CONTENT CONTAINER ===== */}
-      <div className="relative z-20 max-w-[1400px] mx-auto px-6 md:px-8 w-full min-h-screen flex flex-col lg:flex-row lg:items-start justify-start pt-24 lg:pt-28">
+      <div className="relative z-20 max-w-[1400px] mx-auto px-6 md:px-28 w-full min-h-screen flex flex-col lg:flex-row lg:items-start justify-start pt-24 lg:pt-28">
         {/* Left Content */}
-        <div className="w-full lg:w-auto lg:max-w-[600px] mt-8 lg:mt-0">
+        <div className="w-full lg:w-auto lg:max-w-[600px] mt-8 lg:mt-3">
           <motion.div
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
@@ -91,7 +91,7 @@ export default function Hero() {
             transition={{ duration: 0.65, delay: 0.15 }}
             style={{
               fontFamily: 'var(--font-bebas, sans-serif)',
-              fontSize: 'clamp(60px, 6.5vw, 80px)',
+              fontSize: 'clamp(60px, 6.5vw, 130px)',
               lineHeight: 0.92,
               letterSpacing: '0.01em',
               color: '#0A0A0A',
@@ -99,17 +99,17 @@ export default function Hero() {
             className="mb-6"
           >
             BUILDING
-            <br />
-            <span style={{ color: '#1D6252' }}>DIGITAL</span>
+            <span style={{ color: '#1D6252' }}> DIGITAL</span>
             <br />
             EXCELLENCE
+            <br />
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.25 }}
-            className="text-[14px] text-[#4B5563] leading-relaxed max-w-[460px] mb-8"
+            className="text-[15px] text-[#4B5563] leading-relaxed max-w-[460px] mb-8"
           >
             We craft high-performance websites and data-driven digital marketing strategies that turn clicks into customers pixel by pixel.
           </motion.p>
