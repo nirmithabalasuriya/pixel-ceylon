@@ -67,9 +67,9 @@ export default function Hero() {
       </div>
 
       {/* ===== LAYER 2: CONTENT CONTAINER ===== */}
-      <div className="relative z-20 max-w-[1400px] mx-auto px-6 md:px-28 w-full min-h-screen flex flex-col lg:flex-row lg:items-start justify-start pt-24 lg:pt-28">
+      <div className="relative z-20 max-w-[2560px] mx-auto px-6 md:px-28 w-full min-h-screen flex flex-col lg:flex-row lg:items-start justify-start pt-24 lg:pt-28">
         {/* Left Content */}
-        <div className="w-full lg:w-auto lg:max-w-[600px] mt-8 lg:mt-3">
+        <div className="w-full lg:w-auto lg:max-w-[2560px] mt-8 lg:mt-3">
           <motion.div
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
