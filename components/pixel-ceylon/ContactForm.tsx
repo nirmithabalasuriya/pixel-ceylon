@@ -35,6 +35,16 @@ export default function ContactForm() {
       setStatus('error');
     } else {
       setStatus('success');
+      // Fire-and-forget: notify server to send email after successful Supabase insert.
+      fetch('/api/contact-notify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      }).catch((err) => {
+        // Do not affect UI on email failure; server logs errors.
+        console.error('Failed to send contact notification request:', err);
+      });
+
       setForm({ first_name: '', last_name: '', email: '', service: '', message: '' });
     }
   };

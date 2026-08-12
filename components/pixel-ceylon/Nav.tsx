@@ -9,6 +9,7 @@ const links = [
   { label: 'Services', href: '#services' },
   { label: 'Results', href: '#stats' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -25,8 +26,13 @@ export default function Nav() {
   const handleLink = (href: string) => {
     setMobileOpen(false);
     setTimeout(() => {
-      const el = document.querySelector(href);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
+      if (href.startsWith('#')) {
+        const el = document.querySelector(href);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // navigate to absolute/internal path
+        window.location.href = href;
+      }
     }, 150);
   };
 

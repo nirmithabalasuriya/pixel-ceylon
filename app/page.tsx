@@ -6,6 +6,7 @@ import Stats from '@/components/pixel-ceylon/Stats';
 import Projects from '@/components/pixel-ceylon/Projects';
 import Founder from '@/components/pixel-ceylon/Founder';
 import SocialProof from '@/components/pixel-ceylon/SocialProof';
+import BlogSection from '@/components/blog/BlogSection';
 import Testimonials from '@/components/pixel-ceylon/Testimonials';
 import CTA from '@/components/pixel-ceylon/CTA';
 import Footer from '@/components/pixel-ceylon/Footer';
@@ -29,6 +30,7 @@ export default function Home() {
         <Founder />
         <Testimonials />
         <SocialProof />
+        <BlogSection />
         <CTA />
         <Footer />
       </main>
