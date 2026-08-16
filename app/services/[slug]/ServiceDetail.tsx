@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowUpRight, ArrowLeft, Check } from 'lucide-react';
@@ -54,20 +54,40 @@ export default function ServiceDetail({ service }: { service: Service }) {
     {} as Record<string, typeof service.tech_stack>
   );
 
+  const imageCandidates = (() => {
+    const raw = (service.image_url || '').trim();
+    const slugNoHyphen = service.slug.replace(/-/g, '');
+    const nameKey = service.name.toLowerCase().replace(/[^a-z0-9]+/g, '');
+
+    const candidates = [
+      `/images/${slugNoHyphen}.webp`,
+      `/images/${service.slug}.webp`,
+      `/images/${nameKey}.webp`,
+      raw && (raw.startsWith('http') || raw.startsWith('/')) ? raw : raw ? `/images/${raw}` : '',
+      raw && !raw.startsWith('http') ? `/images/${raw.replace(/-/g, '')}` : '',
+    ].filter(Boolean) as string[];
+
+    return [...new Set(candidates)];
+  })();
+
+  const [imageIndex, setImageIndex] = useState(0);
+  const imageSrc = imageCandidates[imageIndex] || '';
+
   return (
     <main style={{ background: '#07080D' }}>
       {/* Hero Banner */}
       <section className="relative pt-28 pb-20 overflow-hidden">
         {/* Background image */}
-        {service.image_url && (
+        {imageSrc && (
           <div className="absolute inset-0 z-0">
             <Image
-              src={service.image_url}
+              src={imageSrc}
               alt={service.name}
               fill
               className="object-cover opacity-20"
               sizes="100vw"
               priority
+              onError={() => setImageIndex((current) => Math.min(current + 1, imageCandidates.length - 1))}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-[#07080D]/60 via-[#07080D]/80 to-[#07080D]" />
           </div>
